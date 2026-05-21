@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ксения & Данила</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="petals"></div>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>Ксения & Данила</h1>
+
+        <p class="date">10 октября 2026</p>
+
+        <div id="countdown">
+          <div>
+            <span id="days"></span>
+            <p>дней</p>
+          </div>
+
+          <div>
+            <span id="hours"></span>
+            <p>часов</p>
+          </div>
+
+          <div>
+            <span id="minutes"></span>
+            <p>минут</p>
+          </div>
+
+          <div>
+            <span id="seconds"></span>
+            <p>секунд</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="place fade">
+      <h2>Дата и место</h2>
+
+      <div class="place-card">
+        <p class="place-date">10 октября 2026</p>
+
+        <p class="place-time">16:00</p>
+
+        <h3 class="place-name">VICTORIA PALACE</h3>
+
+        <a
+          class="map-btn"
+          href="https://yandex.ru/maps/-/CPVDzH9E"
+          target="_blank"
+        >
+          Открыть на карте
+        </a>
+      </div>
+    </section>
+    <section class="program fade">
+      <h2>Программа дня</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time">16:00</div>
+          <div class="event">Сбор гостей</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">16:30</div>
+          <div class="event">Церемония</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">17:00</div>
+          <div class="event">Банкет</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">23:00</div>
+          <div class="event">Финал вечера</div>
+        </div>
+      </div>
+    </section>
+    <section class="details fade">
+      <h2>Детали и просьбы</h2>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="icon">🎁</div>
+          <h3>Подарки</h3>
+          <p>
+            Не ломайте голову над подарками. Ваши конверты помогут нам
+            осуществить мечту о свадебном путешествии.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">💐</div>
+          <h3>Цветы</h3>
+          <p>
+            Просим не обременять себя выбором цветов. Ваше присутствие скрасит
+            этот день ярче любых букетов.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">👗</div>
+          <h3>Дресс-код</h3>
+          <p>
+            Нам будет очень приятно, если вы поддержите цветовую гамму нашей
+            свадьбы.
+          </p>
+          <p>Цвета: бежевый, молочный, шампань, пастельные оттенки.</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">📞</div>
+          <h3>Организатор</h3>
+          <p>
+            Если у вас возникнут вопросы в день свадьбы, обратитесь к нашему
+            организатору.
+          </p>
+          <p class="phone">+7 999 123-45-67</p>
+        </div>
+      </div>
+    </section>
+    <section class="form-section fade">
+      <h2>Анкета гостя</h2>
+
+      <form id="wedding-form" class="wedding-form">
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Будете ли вы присутствовать?</label>
+          <select id="attendance" required>
+            <option value="">Выберите</option>
+            <option>Да, с радостью!</option>
+            <option>К сожалению, не смогу</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Напитки</label>
+          <select id="drink">
+            <option value="">Что предпочитаете?</option>
+            <option>Вино</option>
+            <option>Шампанское</option>
+            <option>Водка/Коньяк</option>
+            <option>Виски/Ром</option>
+            <option>Без алкоголя</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Аллергии или ограничения в еде</label>
+          <textarea
+            id="allergy"
+            placeholder="Например: орехи, морепродукты, вегетарианство"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Комментарий</label>
+          <textarea id="comment" placeholder="Ваши пожелания..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+    </section>
+
+    <audio id="music" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="music-btn">🎵</button>
+    <script src="script.js"></script>
+    <footer class="footer">
+      <p class="footer-text">С любовью</p>
+
+      <h2 class="footer-names">Ксения & Данила</h2>
+
+      <p class="footer-date">10 октября 2026</p>
+    </footer>
+  </body>
+</html>
