@@ -48,6 +48,14 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+.hero-invite {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  max-width: 700px;
+  margin: 25px auto 50px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+}
 .hero-inner {
   animation: fadeHero 2s ease;
 }
@@ -75,6 +83,36 @@ h2 {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 
   padding: 30px;
+}
+.dresscode-palette {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.palette-color {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.color-1 {
+  background: #f5f1ea;
+}
+.color-2 {
+  background: #e7dcc9;
+}
+.color-3 {
+  background: #d5c0a1;
+}
+.color-4 {
+  background: #c7b39a;
+}
+.color-5 {
+  background: #a78f78;
 }
 .names span {
   font-size: 40px;
@@ -307,6 +345,11 @@ button {
 .icon {
   font-size: 34px;
   margin-bottom: 15px;
+}
+.icon {
+  font-size: 32px;
+  color: #cdb79e;
+  margin-bottom: 20px;
 }
 
 .detail-card h3 {
@@ -632,6 +675,22 @@ textarea {
 .map-btn:hover {
   background: #c7beb1;
 }
+
+.organizer-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.organizer-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
 .footer {
   text-align: center;
 
@@ -662,8 +721,19 @@ textarea {
 
 .footer-date {
   font-size: 16px;
+  margin-bottom: 50px;
 
   opacity: 0.8;
+}
+
+.adver {
+  font-size: 13px;
+}
+
+.novacore {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
 }
 #countdown {
   display: flex;
