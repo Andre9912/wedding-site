@@ -48,6 +48,14 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+.hero-invite {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  max-width: 700px;
+  margin: 25px auto 50px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.9);
+}
 .hero-inner {
   animation: fadeHero 2s ease;
 }
@@ -75,6 +83,44 @@ h2 {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 
   padding: 30px;
+}
+.dresscode-palette {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.palette-color {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.color-1 {
+  background: #4a5633; /* лесной зелёный */
+}
+
+.color-2 {
+  background: #f8dbe1; /* пудровый розовый */
+}
+
+.color-3 {
+  background: #dccab3; /* песочный бежевый */
+}
+
+.color-4 {
+  background: #e8dcc1; /* бежевый */
+}
+
+.color-5 {
+  background: #a9b7a4; /* серый шалфей */
+}
+
+.color-6 {
+  background: #7a5a3a; /* коричневый */
 }
 .names span {
   font-size: 40px;
@@ -167,7 +213,87 @@ h2 {
 
   transition: transform 0.3s;
 }
+.dress-btn {
+  margin-top: 20px;
+  background: #d8b884;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.dress-btn:hover {
+  transform: translateY(-2px);
+}
+
+.dress-gallery {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.6s ease;
+
+  margin-top: 20px;
+}
+
+.dress-gallery.open {
+  max-height: 1200px;
+}
+
+.dress-gallery h4 {
+  margin: 25px 0 15px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 28px;
+}
+
+.gallery-row {
+  display: flex;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  padding-bottom: 10px;
+
+  scroll-snap-type: x mandatory;
+}
+
+.gallery-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-row img {
+  width: 170px;
+
+  height: 250px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  flex: none;
+
+  scroll-snap-align: center;
+
+  transition: 0.3s;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-row img:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .gallery-row img {
+    width: 120px;
+
+    height: 180px;
+  }
+}
 .card:hover {
   transform: translateY(-6px);
 }
@@ -307,6 +433,11 @@ button {
 .icon {
   font-size: 34px;
   margin-bottom: 15px;
+}
+.icon {
+  font-size: 32px;
+  color: #cdb79e;
+  margin-bottom: 20px;
 }
 
 .detail-card h3 {
@@ -519,51 +650,65 @@ textarea {
   margin-bottom: 40px;
 }
 .program {
-  text-align: center;
+  background: #faf7f2;
 }
 
 .timeline {
-  max-width: 600px;
-
-  margin: 0 auto;
-
-  position: relative;
-
-  padding-left: 30px;
+  max-width: 900px;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.timeline::before {
-  content: "";
-
-  position: absolute;
-
-  left: 10px;
-
-  top: 0;
-
-  width: 2px;
-
-  height: 100%;
-
-  background: #d6cfc4;
+.timeline-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  gap: 40px;
+  position: relative;
 }
 
-.timeline-item {
-  position: relative;
+.timeline-row img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
 
-  margin-bottom: 40px;
+.timeline-row:hover img {
+  transform: scale(1.05);
+}
 
-  text-align: left;
+.timeline-center {
+  text-align: center;
 }
 
 .time {
-  font-weight: 600;
-
-  font-size: 18px;
-
-  margin-bottom: 5px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 54px;
+  color: #b59667;
+  margin-bottom: 10px;
 }
 
+.event {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  color: #444;
+}
+
+.timeline-row:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 145px;
+  width: 2px;
+  height: 45px;
+  background: #e5d8c6;
+}
 .event {
   font-size: 16px;
 
@@ -632,6 +777,22 @@ textarea {
 .map-btn:hover {
   background: #c7beb1;
 }
+
+.organizer-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.organizer-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
 .footer {
   text-align: center;
 
@@ -662,8 +823,19 @@ textarea {
 
 .footer-date {
   font-size: 16px;
+  margin-bottom: 50px;
 
   opacity: 0.8;
+}
+
+.adver {
+  font-size: 13px;
+}
+
+.novacore {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
 }
 #countdown {
   display: flex;
@@ -745,6 +917,30 @@ textarea {
 
   #countdown span {
     font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .timeline {
+    gap: 28px;
+  }
+  .timeline-row {
+    grid-template-columns: 60px 1fr 60px;
+    gap: 14px;
+  }
+  .timeline-row img {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+  }
+  .time {
+    font-size: 34px;
+  }
+  .event {
+    font-size: 25px;
+  }
+  .timeline-row:not(:last-child)::after {
+    height: 30px;
+    margin-top: 95px;
   }
 }
 @media (max-width: 768px) {

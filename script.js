@@ -14,7 +14,16 @@ musicBtn.addEventListener("click", () => {
 
   playing = !playing;
 });
+const dressBtn = document.getElementById("dressBtn");
+const dressGallery = document.getElementById("dressGallery");
 
+dressBtn.addEventListener("click", () => {
+  dressGallery.classList.toggle("open");
+
+  dressBtn.textContent = dressGallery.classList.contains("open")
+    ? "Скрыть примеры"
+    : "Посмотреть примеры образов";
+});
 document
   .getElementById("wedding-form")
   .addEventListener("submit", function (e) {

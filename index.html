@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Данила & Ксения</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="petals"></div>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>Данила & Ксения</h1>
+
+        <p class="hero-invite">
+          Приглашаем вас разделить с нами самый счастливый день нашей жизни.
+        </p>
+
+        <div id="countdown">
+          <div>
+            <span id="days"></span>
+            <p>дней</p>
+          </div>
+
+          <div>
+            <span id="hours"></span>
+            <p>часов</p>
+          </div>
+
+          <div>
+            <span id="minutes"></span>
+            <p>минут</p>
+          </div>
+
+          <div>
+            <span id="seconds"></span>
+            <p>секунд</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="place fade">
+      <h2>Дата и место</h2>
+
+      <div class="place-card">
+        <p class="place-date">10 октября 2026</p>
+
+        <p class="place-time">16:00</p>
+
+        <h3 class="place-name">VICTORIA PALACE</h3>
+
+        <a
+          class="map-btn"
+          href="https://yandex.ru/maps/-/CPVDzH9E"
+          target="_blank"
+        >
+          Открыть на карте
+        </a>
+      </div>
+    </section>
+    <section class="program fade">
+      <h2>Программа дня</h2>
+
+      <div class="timeline">
+        <div class="timeline-row">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop&crop=center"
+            alt="Ангелочек"
+          />
+          <div class="timeline-center">
+            <div class="time">16:00</div>
+            <div class="event">Сбор гостей</div>
+          </div>
+          <img src="images/svad.jpg" alt="Шампанское" />
+        </div>
+
+        <div class="timeline-row">
+          <img
+            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=200&h=200&fit=crop&crop=center"
+            alt="Кольца"
+          />
+          <div class="timeline-center">
+            <div class="time">16:30</div>
+            <div class="event">Церемония</div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1589330694653-ded6df03f754?w=200&h=200&fit=crop&crop=center"
+            alt="Букет"
+          />
+        </div>
+
+        <div class="timeline-row">
+          <img src="images/tort.jpg" alt="Торт" />
+          <div class="timeline-center">
+            <div class="time">17:00</div>
+            <div class="event">Банкет</div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop&crop=center"
+            alt="Ангел"
+          />
+        </div>
+
+        <div class="timeline-row">
+          <img
+            src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=200&h=200&fit=crop&crop=center"
+            alt="Фейерверк"
+          />
+          <div class="timeline-center">
+            <div class="time">23:00</div>
+            <div class="event">Финал вечера</div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=200&h=200&fit=crop&crop=center"
+            alt="Бокалы"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="details fade">
+      <h2>Для наших гостей</h2>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="icon">✦</div>
+          <h3>Подарки</h3>
+          <p>
+            Не ломайте голову над подарками. Ваши конверты помогут нам
+            осуществить мечту о свадебном путешествии.
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">❀</div>
+          <h3>Цветы</h3>
+          <p>
+            После свадьбы мы отправляемся в свадебное путешествие, поэтому не
+            обременяйте себя выбором цветов.<br />Вместо этого мы будем рады
+            бутылочке вашего любимого вина
+          </p>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">◈</div>
+
+          <h3>Дресс-код</h3>
+
+          <p>
+            Нам будет особенно приятно видеть вас в нарядах цветовой гаммы нашей
+            свадьбы.
+          </p>
+
+          <div class="dresscode-palette" id="dressToggle">
+            <div class="palette-color color-1"></div>
+            <div class="palette-color color-2"></div>
+            <div class="palette-color color-3"></div>
+            <div class="palette-color color-4"></div>
+            <div class="palette-color color-5"></div>
+            <div class="palette-color color-6"></div>
+          </div>
+
+          <button class="dress-btn" id="dressBtn">
+            Посмотреть примеры образов
+          </button>
+
+          <div class="dress-gallery" id="dressGallery">
+            <h4>Девушки</h4>
+
+            <div class="gallery-row">
+              <img src="images/dress/girl1.jpg" />
+              <img src="images/dress/girl2.webp" />
+              <img src="images/dress/girl3.webp" />
+              <img src="images/dress/girl4.webp" />
+              <img src="images/dress/girl5.webp" />
+              <img src="images/dress/girl6.webp" />
+            </div>
+
+            <h4>Мужчины</h4>
+
+            <div class="gallery-row">
+              <img src="images/dress/man1.jpg" />
+              <img src="images/dress/men2.webp" />
+              <img src="images/dress/man3.webp" />
+              <img src="images/dress/man4.webp" />
+              <img src="images/dress/man5.webp" />
+              <img src="images/dress/man6.webp" />
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="icon">✆</div>
+          <h3>Организатор</h3>
+          <p>
+            По любым вопросам вы можете обращаться к нашему организатору
+            Екатерине.
+          </p>
+
+          <a href="tel:+79880623128" class="organizer-btn">
+            📞 +7 (988) 062-31-28
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="form-section fade">
+      <h2>Анкета гостя</h2>
+
+      <form id="wedding-form" class="wedding-form">
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input type="text" id="name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Будете ли вы присутствовать?</label>
+          <select id="attendance" required>
+            <option value="">Выберите</option>
+            <option>Да, с радостью!</option>
+            <option>К сожалению, не смогу</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Напитки</label>
+          <select id="drink">
+            <option value="">Что предпочитаете?</option>
+            <option>Вино</option>
+            <option>Водка</option>
+            <option>Коньяк</option>
+            <option>Виски</option>
+            <option>Без алкоголя</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Аллергии или ограничения в еде</label>
+          <textarea
+            id="allergy"
+            placeholder="Например: орехи, морепродукты, вегетарианство"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Комментарий</label>
+          <textarea id="comment" placeholder="Ваши пожелания..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить</button>
+      </form>
+    </section>
+
+    <audio id="music" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="music-btn">🎵</button>
+    <script src="script.js"></script>
+    <footer class="footer">
+      <p class="footer-text">С любовью</p>
+
+      <h2 class="footer-names">Данила & Ксения</h2>
+
+      <p class="footer-date">10 октября 2026</p>
+      <p class="adver">
+        Cоздано студией <a href="https://t.me/NovacoreLabs">NovacoreLabs</a>
+      </p>
+      <img class="novacore" src="images/Nova.jpg" alt="" />
+    </footer>
+  </body>
+</html>
